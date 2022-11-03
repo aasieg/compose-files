@@ -8,7 +8,7 @@ services:
     volumes:
       - /home/aaron/.config/jellyfin:/config
       - /home/aaron/.cache/jellyfin:/cache
-      - /home/share:/media
+      - /home/share/Videos:/media
       - /home/aaron/.config/jellyfin/web-config.json:/jellyfin/jellyfin-web/config.json
     restart: 'unless-stopped'
     # Optional - alternative address used for autodiscovery
