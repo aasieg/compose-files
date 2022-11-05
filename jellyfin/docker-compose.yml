@@ -10,7 +10,7 @@ services:
       - /home/aaron/.cache/jellyfin:/cache
       - /home/share/Videos:/media
       - /home/aaron/.config/jellyfin/web-config.json:/jellyfin/jellyfin-web/config.json
-    device:
+    devices:
       - /dev/dri/renderD128:/dev/dri/renderD128
       - /dev/dri/card0:/dev/dri/card0
     restart: 'unless-stopped'
