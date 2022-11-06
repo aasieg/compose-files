@@ -1,0 +1,17 @@
+version: "3.2"
+services:
+  sonarr:
+    image: cr.hotio.dev/hotio/sonarr:latest
+    network_mode: bridge
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New York
+    volumes:
+      - /home/aaron/.config/sonarr:/config
+      - /data:/data
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 8989:8989
+    restart: unless-stopped
