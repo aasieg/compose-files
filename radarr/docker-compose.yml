@@ -11,7 +11,7 @@ services:
       - TZ=America/New York
     volumes:
       - /home/aaron/.config/radarr:/config
-      - /home/share:/data
+      - /data:/data
       - /etc/localtime:/etc/localtime:ro
     ports:
       - 7878:7878
