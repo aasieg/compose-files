@@ -9,7 +9,9 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - UMASK=002
       - TZ=America/New York
     volumes:
       - /home/aaron/.config/bazarr:/config
+      - /data/media/movies:/movies #optional
+      - /data/media/movies:/tv #optional
+    restart: unless-stopped
