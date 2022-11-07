@@ -6,7 +6,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=America/New York
+      - TZ: "Etc/UCT"
     volumes:
       - /home/aaron/.config/bazarr:/config
       - /data/movies:/movies #optional
