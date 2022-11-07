@@ -1,16 +1,17 @@
-version: "2.1"
+version: "3.7"
 services:
   bazarr:
-    image: lscr.io/linuxserver/bazarr:latest
+    image: cr.hotio.dev/hotio/bazarr
     container_name: bazarr
     environment:
       - PUID=1000
       - PGID=1000
+      - UMASK=002
       - TZ=Etc/UTC
     volumes:
       - /home/aaron/.config/bazarr:/config
       - /data/movies:/movies #optional
       - /data/tv:/tv #optional
     ports:
-      - 6767:6767
+      - "6767:6767"
     restart: unless-stopped
