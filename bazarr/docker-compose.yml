@@ -3,7 +3,10 @@ version: "3.2"
 services:
   bazarr:
     container_name: bazarr
-    image: cr.hotio.dev/hotio/bazarr
+    image: cr.hotio.dev/hotio/bazarr:latest
+    logging:
+      driver: json-file
+    network_mode: bridge
     ports:
       - 6767:6767
     environment:
@@ -11,7 +14,9 @@ services:
       - PGID=1000
       - TZ=America/New York
     volumes:
+      - /etc/localtime:/etc/localtime:ro
       - /home/aaron/.config/bazarr:/config
       - /data/media/movies:/movies #optional
-      - /data/media/movies:/tv #optional
+      - /data/media/tv:/tv #optional
     restart: unless-stopped
+    
