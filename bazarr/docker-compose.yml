@@ -10,8 +10,7 @@ services:
       - TZ=Etc/UTC
     volumes:
       - /home/aaron/.config/bazarr:/config
-      - /data/media/movies:/movies #optional
-      - /data/media/tv:/tv #optional
+      - /data:/data
     ports:
       - "6767:6767"
     restart: unless-stopped
