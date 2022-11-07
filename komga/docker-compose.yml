@@ -18,6 +18,6 @@ services:
       - 8080:8080
     user: "1000:1000"
     # remove the whole environment section if you don't need it
-    environment:
-      - <ENV_VAR>=<extra configuration>
+    #environment:
+    #  - <ENV_VAR>=<extra configuration>
     restart: unless-stopped
