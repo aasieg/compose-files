@@ -3,8 +3,6 @@ services:
   jellyfin:
     image: cr.hotio.dev/hotio/jellyfin
     container_name: jellyfin
-    group_add:
-      - render
     network_mode: 'host'
     ports:
       - "8096:8096"
