@@ -1,12 +1,18 @@
-version: '3'
+version: '3.7'
 services:
   jellyfin:
     image: cr.hotio.dev/hotio/jellyfin
     container_name: jellyfin
-    user: 1000:1000
     group_add:
-      - '109'
+      - render
     network_mode: 'host'
+    ports:
+      - "8096:8096"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Etc/UTC
     volumes:
       - /home/aaron/.config/jellyfin:/config
       - /home/aaron/.cache/jellyfin:/cache
