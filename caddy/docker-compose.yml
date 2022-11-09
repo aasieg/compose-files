@@ -1,17 +1,27 @@
 version: "3.7"
 
+networks:
+        web:
+                external: true
+        internal:
+                external: false
+                driver: bridge
+
 services:
-  caddy:
-    container_name: caddy
-    image: caddy:latest
-    restart: unless-stopped
-    ports:
-      - "80:80"
-      - "443:443"
-      - "443:443/udp"
-    volumes:
-      - /etc/caddy/Caddyfile:/etc/caddy/Caddyfile
-      - /home/aaron/site:/srv
-      - /var/www/html:/var/www/html
-      - /home/aaron/caddy_data:/data
-      - /home/aaron/caddy_config:/config
+        caddy:
+                container_name: caddy
+                image: caddy:latest
+                restart: unless-stopped
+                ports:
+                        - "80:80"
+                        - "443:443"
+                        - "443:443/udp"
+                volumes:
+                        - /data/caddy/Caddyfile:/etc/caddy/Caddyfile
+                        - /home/aaron/site:/srv
+                        - /var/www/html:/var/www/html
+                        - /home/aaron/caddy_data:/data # Optional
+                        - /home/aaron/caddy_config:/config # Optional
+                networks:
+                        - web
+                        - internal
