@@ -11,7 +11,7 @@ services:
     volumes:
       - /etc/caddy/Caddyfile:/etc/caddy/Caddyfile
       #- $PWD/site:/srv
-      -/var/www/html:/var/www/html
+      - /var/www/html:/var/www/html
       - caddy_data:/data
       - caddy_config:/config
 
