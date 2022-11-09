@@ -17,7 +17,7 @@ services:
                         - "443:443"
                         - "443:443/udp"
                 volumes:
-                        - /data/caddy/Caddyfile:/etc/caddy/Caddyfile
+                        - /etc/caddy/Caddyfile:/etc/caddy/Caddyfile
                         - /home/aaron/site:/srv
                         - /var/www/html:/var/www/html
                         - /home/aaron/caddy_data:/data # Optional
