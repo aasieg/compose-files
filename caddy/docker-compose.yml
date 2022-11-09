@@ -2,6 +2,7 @@ version: "3.7"
 
 services:
   caddy:
+    container_name: caddy
     image: caddy:latest
     restart: unless-stopped
     ports:
@@ -14,8 +15,3 @@ services:
       - /var/www/html:/var/www/html
       - /home/aaron/caddy_data:/data
       - /home/aaron/caddy_config:/config
-
-volumes:
-  caddy_data:
-    external: true
-  caddy_config:
