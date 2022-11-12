@@ -32,8 +32,8 @@ services:
       - ./app/themes:/var/www/html/themes
       - /etc/localtime:/etc/localtime:ro
     environment:
-    - VIRTUAL_HOST
-  restart: unless-stopped
+      - VIRTUAL_HOST
+    restart: unless-stopped
 volumes:
   nextcloud:
   db:
