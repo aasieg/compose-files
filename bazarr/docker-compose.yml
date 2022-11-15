@@ -3,6 +3,8 @@ services:
   bazarr:
     image: cr.hotio.dev/hotio/bazarr
     container_name: bazarr
+    networks:
+      - starr-net
     environment:
       - PUID=1000
       - PGID=1000
