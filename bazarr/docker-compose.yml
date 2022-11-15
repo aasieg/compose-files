@@ -1,4 +1,9 @@
 version: "3.7"
+
+networks:
+    starr-net:
+        external: true
+
 services:
   bazarr:
     image: cr.hotio.dev/hotio/bazarr
