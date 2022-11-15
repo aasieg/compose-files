@@ -1,20 +1,20 @@
 version: "3.7"
 
 services:
-doplarr:
-  image: cr.hotio.dev/hotio/doplarr
-  container_name: doplarr
-  networks:
-    - starr-net
-  environment:
-    - SONARR__URL=http://sonarr:8989
-    - RADARR__URL=http://radarr:7878
-    - SONARR__API=$SONARR_API
-    - RADARR__API=$RADARR_API
-    - DISCORD__TOKEN=$DOPLARR_BOT_TOKEN
-    - PUID=1000
-    - PGID=1000
-    - UMASK=002
-    - TZ=Etc/UTC
-  volumes:
-    - /home/aaron/.config/doplarr:/config
+  doplarr:
+    image: cr.hotio.dev/hotio/doplarr
+    container_name: doplarr
+    networks:
+      - starr-net
+    environment:
+      - SONARR__URL=http://sonarr:8989
+      - RADARR__URL=http://radarr:7878
+      - SONARR__API=$SONARR_API
+      - RADARR__API=$RADARR_API
+      - DISCORD__TOKEN=$DOPLARR_BOT_TOKEN
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Etc/UTC
+    volumes:
+      - /home/aaron/.config/doplarr:/config
