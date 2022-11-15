@@ -1,5 +1,9 @@
 version: "3.7"
 
+networks:
+    starr-net:
+        external: true
+
 services:
   readarr:
     container_name: readarr
