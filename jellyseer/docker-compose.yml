@@ -2,6 +2,8 @@ version: '3'
 services:
     jellyseerr:
        image: fallenbagel/jellyseerr:latest
+       networks:
+            - starr-net
        container_name: jellyseerr
        environment:
             - LOG_LEVEL=debug
