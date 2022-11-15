@@ -1,5 +1,10 @@
 ---
 version: "3.2"
+
+networks:
+    starr-net:
+        external: true
+
 services:
   radarr:
     image: cr.hotio.dev/hotio/radarr
