@@ -3,6 +3,8 @@ version: "3.7"
 services:
   readarr:
     container_name: readarr
+    networks:
+      - starr-net
     image: cr.hotio.dev/hotio/readarr
     ports:
       - "8787:8787"
