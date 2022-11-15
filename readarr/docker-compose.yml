@@ -21,3 +21,4 @@ services:
       - /home/aaron/.config/readarr:/config
       - /data/media/books:/books #optional
       - /data/torrents:/downloads #optional
+    restart: unless-stopped
