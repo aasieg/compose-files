@@ -5,7 +5,7 @@ doplarr:
   image: cr.hotio.dev/hotio/doplarr
   container_name: doplarr
   networks:
-    - nextcloud_network
+    - starr-net
   environment:
     - SONARR__URL=http://sonarr:8989
     - RADARR__URL=http://radarr:7878
