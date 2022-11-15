@@ -1,0 +1,27 @@
+version: "3.7"
+
+networks:
+    jelly-net:
+        external: true
+
+services:
+  jellymusic:
+    image: kgt1/jellyfin-discord-music-bot
+    container_name: jellymusic
+    networks:
+      - jelly-net
+    environment:
+      - DISCORD_PREFIX="/"
+      - JELLYFIN_SERVER_ADDRESS="http://jellyfin/jellyfin"
+      - JELLYFIN_USERNAME=$JELLYFIN_USERNAME
+      - JELLYFIN_PASSWORD=$JELLYFIN_PASSWORD
+      - DISCORD__TOKEN=$DOPLARR_BOT_TOKEN
+      - JELLYFIN_APP_NAME="JellyMusic"
+      - MESSAGE_UPDATE_INTERVAL="2000"
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Etc/UTC
+    volumes:
+      - /home/aaron/.config/doplarr:/config
+    restart unless-stopped
