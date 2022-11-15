@@ -24,4 +24,4 @@ services:
       - TZ=Etc/UTC
     volumes:
       - /home/aaron/.config/doplarr:/config
-    restart unless-stopped
+    restart: unless-stopped
