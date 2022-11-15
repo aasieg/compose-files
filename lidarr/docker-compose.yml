@@ -4,6 +4,8 @@ services:
   lidarr:
     container_name: lidarr
     image: cr.hotio.dev/hotio/lidarr
+    networks:
+      - starr-net
     ports:
       - "8686:8686"
     environment:
