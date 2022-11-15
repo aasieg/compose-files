@@ -4,6 +4,8 @@ services:
   radarr:
     image: cr.hotio.dev/hotio/radarr
     network_mode: bridge
+    networks:
+      - starr-net
     container_name: radarr
     environment:
       - PUID=1000
