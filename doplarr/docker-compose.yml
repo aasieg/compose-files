@@ -11,8 +11,8 @@ services:
     networks:
       - starr-net
     environment:
-      - SONARR__URL=http://sonarr:8989
-      - RADARR__URL=http://radarr:7878
+      - SONARR__URL=http://sonarr:8989/sonarr
+      - RADARR__URL=http://radarr:7878/radarr
       - SONARR__API=$SONARR_API
       - RADARR__API=$RADARR_API
       - DISCORD__TOKEN=$DOPLARR_BOT_TOKEN
