@@ -6,7 +6,7 @@ services:
     container_name: jellymusic
     environment:
       - DISCORD_PREFIX="/"
-      - JELLYFIN_SERVER_ADDRESS="http://192.168.5.50/jellyfin"
+      - JELLYFIN_SERVER_ADDRESS="http://192.168.5.50:8096/jellyfin"
       - JELLYFIN_USERNAME=$JELLYFIN_USERNAME
       - JELLYFIN_PASSWORD=$JELLYFIN_PASSWORD
       - DISCORD__TOKEN=$DOPLARR_BOT_TOKEN
