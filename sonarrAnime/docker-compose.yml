@@ -20,5 +20,5 @@ services:
       - /data:/data
       - /etc/localtime:/etc/localtime:ro
     ports:
-      - 8989:8888
+      - 8888:8989
     restart: unless-stopped
